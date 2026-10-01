@@ -22,7 +22,7 @@ jobs:
         pip install pytest pytest-cov
 
     - name: Run tests with coverage
-      run: pytest --cov=app --cov-report=xml
+      run: pytest --cov=calculator_app --cov-report=xml
 
     - name: Enforce 100% coverage
       run: coverage report --fail-under=100
