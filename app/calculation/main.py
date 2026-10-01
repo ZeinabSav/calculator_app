@@ -52,3 +52,14 @@ def repl():
 
 if __name__ == "__main__":
     repl()
+def print_help():
+    print("Commands:")
+    print("  add/sub/mul/div a b")
+    print("  square a")
+    print("  pow a b")
+    print("  mod a b")
+    print("  sqrt a")
+    print("  abs a")
+    print("  history")
+    print("  help")
+    print("  exit")
