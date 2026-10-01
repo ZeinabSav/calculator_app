@@ -24,8 +24,6 @@ jobs:
         pip install pytest pytest-cov
 
     - name: Run tests with coverage
-      run: |
-        pytest --cov=app --cov-report=term-missing
-
-
+  run: |
+    pytest --cov=app --cov-report=term-missing
 
