@@ -11,7 +11,7 @@ def test_add_endpoint():
     )
 
     # Give server time to start
-    time.sleep(2)
+    time.sleep(3)
 
     with sync_playwright() as p:
         browser = p.chromium.launch()
@@ -26,4 +26,5 @@ def test_add_endpoint():
 
     # Stop server
     server.terminate()
+
 
