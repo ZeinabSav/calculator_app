@@ -1,3 +1,20 @@
+
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
+logger = logging.getLogger(__name__)
+
+@app.get("/add")
+def add(a: float, b: float):
+    result = a + b
+    logger.info(f"ADD operation: {a} + {b} = {result}")
+    return {"result": result}
+
+
 from app.calculation.calculation import CalculationFactory
 
 def print_help():
