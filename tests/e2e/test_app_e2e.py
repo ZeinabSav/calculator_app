@@ -5,7 +5,7 @@ from playwright.sync_api import sync_playwright
 def test_add_endpoint():
     # Start FastAPI server
     server = subprocess.Popen(
-        ["uvicorn", "app.api.main:app", "--port", "8000"],
+        ["uvicorn", "app.api.main:app", "--host", "127.0.0.1", "--port", "8000"],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE
     )
@@ -26,3 +26,4 @@ def test_add_endpoint():
 
     # Stop server
     server.terminate()
+
